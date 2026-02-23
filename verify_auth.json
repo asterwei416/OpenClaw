@@ -1,0 +1,6 @@
+{
+  "jsonrpc": "2.0",
+  "method": "tools/call",
+  "params": { "name": "calendar_list_events", "arguments": {} },
+  "id": 5
+}

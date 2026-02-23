@@ -1,0 +1,17 @@
+Feb 23 09:05:08 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:05:27 AsterWei systemd[1]: Stopping openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792)...
+Feb 23 09:05:27 AsterWei systemd[1]: openclaw-relay.service: Deactivated successfully.
+Feb 23 09:05:27 AsterWei systemd[1]: Stopped openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:05:27 AsterWei systemd[1]: openclaw-relay.service: Consumed 5.981s CPU time, 17.1M memory peak, 0B memory swap peak.
+Feb 23 09:05:27 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:05:28 AsterWei systemd[1]: Stopping openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792)...
+Feb 23 09:05:28 AsterWei systemd[1]: openclaw-relay.service: Deactivated successfully.
+Feb 23 09:05:28 AsterWei systemd[1]: Stopped openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:05:28 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:11:21 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+-- Boot d987ac8c472344aaa31032e28d686251 --
+Feb 23 09:17:39 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:18:25 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+Feb 23 09:22:08 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+-- Boot 00aa05ed51534704b9c083d786eb6d1d --
+Feb 23 09:24:38 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).

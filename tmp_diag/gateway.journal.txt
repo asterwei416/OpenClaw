@@ -1,0 +1,35 @@
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.010Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /home/openclaw/.openclaw/canvas)
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.336Z [heartbeat] started
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.339Z [health-monitor] started (interval: 300s, grace: 60s)
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.347Z [gateway] agent model: google/gemini-2.5-flash
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.351Z [gateway] listening on ws://127.0.0.1:18789 (PID 822)
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.354Z [gateway] listening on ws://[::1]:18789
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.357Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-23.log
+Feb 23 08:56:39 AsterWei node[822]: 2026-02-23T00:56:39.415Z [browser/service] Browser control service ready (profiles=2)
+Feb 23 08:56:41 AsterWei node[822]: 2026-02-23T00:56:41.360Z [telegram] [default] starting provider (@InkShadow_Marshal_Bot)
+Feb 23 08:56:41 AsterWei node[822]: 2026-02-23T00:56:41.427Z [telegram] autoSelectFamily=true (default-node22)
+-- Boot 222aafa7bd444c85bfd537111f973a74 --
+Feb 23 09:05:08 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+Feb 23 09:05:23 AsterWei systemd[1]: /etc/systemd/system/openclaw-gateway.service:18: Unknown key name 'StartLimitIntervalSec' in section 'Service', ignoring.
+Feb 23 09:05:27 AsterWei systemd[1]: Stopping openclaw-gateway.service - OpenClaw Gateway (system)...
+Feb 23 09:05:27 AsterWei systemd[1]: openclaw-gateway.service: Deactivated successfully.
+Feb 23 09:05:27 AsterWei systemd[1]: Stopped openclaw-gateway.service - OpenClaw Gateway (system).
+Feb 23 09:05:27 AsterWei systemd[1]: openclaw-gateway.service: Consumed 13.564s CPU time, 107.1M memory peak, 0B memory swap peak.
+Feb 23 09:05:27 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+Feb 23 09:08:42 AsterWei node[769]: 2026-02-23T01:08:42.942Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /home/openclaw/.openclaw/canvas)
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.097Z [heartbeat] started
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.106Z [health-monitor] started (interval: 300s, grace: 60s)
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.118Z [gateway] agent model: google/gemini-2.5-flash
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.124Z [gateway] listening on ws://127.0.0.1:18789 (PID 769)
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.127Z [gateway] listening on ws://[::1]:18789
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.132Z [gateway] log file: /tmp/openclaw/openclaw-2026-02-23.log
+Feb 23 09:08:44 AsterWei node[769]: 2026-02-23T01:08:44.234Z [browser/service] Browser control service ready (profiles=2)
+Feb 23 09:08:45 AsterWei node[769]: 2026-02-23T01:08:45.752Z [telegram] [default] starting provider (@InkShadow_Marshal_Bot)
+Feb 23 09:08:45 AsterWei node[769]: 2026-02-23T01:08:45.882Z [telegram] autoSelectFamily=true (default-node22)
+Feb 23 09:11:21 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+-- Boot d987ac8c472344aaa31032e28d686251 --
+Feb 23 09:17:38 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+Feb 23 09:18:25 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+Feb 23 09:22:08 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).
+-- Boot 00aa05ed51534704b9c083d786eb6d1d --
+Feb 23 09:24:38 AsterWei systemd[1]: Started openclaw-gateway.service - OpenClaw Gateway (system).

@@ -1,0 +1,23 @@
+[Unit]
+Description=OpenClaw Gateway (system)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=openclaw
+WorkingDirectory=/home/openclaw
+Environment=HOME=/home/openclaw
+Environment=NODE_OPTIONS=--dns-result-order=ipv4first
+Environment=OPENCLAW_GATEWAY_TOKEN=80cabaa3375145d27ce2475573012ea3c0b2a5f8778d142a
+Environment=GOG_KEYRING_PASSWORD=openclaw-gog
+Environment=GOG_ACCOUNT=tristan416@gmail.com
+ExecStart=/home/openclaw/.nvm/versions/node/v25.6.1/bin/node /home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/index.js gateway --port 18789
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=0
+KillMode=process
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target

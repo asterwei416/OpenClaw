@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.19-2",
+    "lastTouchedAt": "2026-02-21T00:15:00.000Z"
+  },
+  "env": {
+    "OPENROUTER_API_KEY": "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"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "botToken": "8564494985:AAFk9pur_lU8RG3TOv3dJwbwYofNdYOUC7E",
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "groupPolicy": "allowlist"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "calendar_check": {
+        "enabled": true,
+        "script": "python3 /home/openclaw/openclaw/openclaw_calendar.py"
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback"
+  }
+}

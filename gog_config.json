@@ -1,0 +1,17 @@
+{
+  "accounts": {
+    "tristan416@gmail.com": {
+      "services": [
+        "calendar",
+        "gmail",
+        "drive",
+        "sheets",
+        "contacts"
+      ]
+    }
+  },
+  "default": "tristan416@gmail.com",
+  "credentials": {
+    "default": "/home/openclaw/.config/gogcli/credentials.json"
+  }
+}

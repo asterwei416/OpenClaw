@@ -1,0 +1,300 @@
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/onboarding.finalize-nGPqo0XQ.js:58:import "./with-timeout-DeGd8bce.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/onboarding.finalize-nGPqo0XQ.js:293:				timeoutMs: 1e4
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-cost-usage-CNxpZ3DJ.js:357:		"timeout"
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:62:async function downloadFile(url, destPath, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:65:		timeoutMs: Math.max(1e3, timeoutMs)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:79:	const { archivePath, archiveType, targetDir, stripComponents, timeoutMs } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:86:				timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:100:				timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:121:			], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:132:			], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:168:			return await runCommandWithTimeout(argv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:184:	const { entry, spec, timeoutMs } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:221:		downloaded = (await downloadFile(url, archivePath, timeoutMs)).bytes;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:252:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:381:async function resolveBrewBinDir(timeoutMs, brewExe) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:384:	const prefixResult = await runCommandWithTimeout([exe, "--prefix"], { timeoutMs: Math.min(timeoutMs, 3e4) });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:443:	], { timeoutMs: params.timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:450:async function installGoViaApt(timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:464:		await runBestEffortCommand(aptUpdateArgv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:465:		const aptResult = await runCommandSafely(aptInstallArgv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:477:	], { timeoutMs: 5e3 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:482:	await runBestEffortCommand(["sudo", ...aptUpdateArgv], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:483:	const aptResult = await runCommandSafely(["sudo", ...aptInstallArgv], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:497:		], { timeoutMs: params.timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:504:	if (hasBinary("apt-get")) return installGoViaApt(params.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:510:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:520:	const timeoutMs = Math.min(Math.max(params.timeoutMs ?? 3e5, 1e3), 9e5);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:541:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:556:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:562:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:569:		const brewBin = await resolveBrewBinDir(timeoutMs, brewExe);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-CR-FLxJm.js:574:		timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:51:async function resolveGlobalRoot(manager, runCommand, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:61:	], { timeoutMs }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:65:async function resolveGlobalPackageRoot(manager, runCommand, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:66:	const root = await resolveGlobalRoot(manager, runCommand, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:70:async function detectGlobalInstallManagerForRoot(runCommand, pkgRoot, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:87:		const res = await runCommand(argv, { timeoutMs }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:104:async function detectGlobalInstallManagerByPresence(runCommand, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:106:		const root = await resolveGlobalRoot(manager, runCommand, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:204:async function readBranchName(runCommand, root, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:212:	], { timeoutMs }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:216:async function listGitTags(runCommand, root, timeoutMs, pattern = "v*") {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:225:	], { timeoutMs }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:229:async function resolveChannelTag(runCommand, root, timeoutMs, channel) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:230:	const tags = await listGitTags(runCommand, root, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:242:async function resolveGitRoot(runCommand, candidates, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:250:		], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:279:	const { runCommand, name, argv, cwd, timeoutMs, env, progress, stepIndex, totalSteps } = opts;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:291:		timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:359:	const timeoutMs = opts.timeoutMs ?? DEFAULT_TIMEOUT_MS;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:373:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:381:	let gitRoot = await resolveGitRoot(runCommand, candidates, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:400:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:404:		const branch = channel === "dev" ? await readBranchName(runCommand, gitRoot, timeoutMs) : null;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:622:					timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:658:					timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:705:			const tag = await resolveChannelTag(runCommand, gitRoot, timeoutMs, channel);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:807:				timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:891:	const globalManager = await detectGlobalInstallManagerForRoot(runCommand, pkgRoot, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/session-dirs-BP6oNKgV.js:904:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:190:	throw new Error(`file lock timeout for ${normalizedFile}`);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:1985:			signal: AbortSignal.timeout(1e4),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2039:function resolveTimeoutMs(timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2040:	if (typeof timeoutMs !== "number" || !Number.isFinite(timeoutMs)) return DEFAULT_TIMEOUT_MS;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2041:	return Math.max(0, timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2054:		timeout: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2097:	const timeoutMs = resolveTimeoutMs(opts.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2105:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2152:	const timeoutMs = resolveTimeoutMs(opts.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:2160:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:3247:		const response = await fetch(`${VENICE_BASE_URL}/models`, { signal: AbortSignal.timeout(5e3) });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:3409:		const response = await fetch(`${apiBase}/api/tags`, { signal: AbortSignal.timeout(5e3) });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/model-selection-mHHEzs4Y.js:3443:			signal: AbortSignal.timeout(5e3)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/control-ui-assets-COTjW_yJ.js:167:		timeoutMs: opts?.timeoutMs ?? 10 * 6e4
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.message-r51hWfdQ.js:57:import "./with-timeout-DeGd8bce.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.message-r51hWfdQ.js:559:	helpers.withMessageBase(message.command("timeout").description("Timeout a member").requiredOption("--guild-id <id>", "Guild id").requiredOption("--user-id <id>", "User id")).option("--duration-min <n>", "Timeout duration minutes").option("--until <iso>", "Timeout until").option("--reason <text>", "Moderation reason").action(async (opts) => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.message-r51hWfdQ.js:560:		await helpers.runMessageAction("timeout", opts);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:7:import { t as bindAbortRelay } from "./fetch-timeout-DL3f_O53.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:31:	const { timeoutMs, signal } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:32:	if (!timeoutMs && !signal) return {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:36:	if (!timeoutMs) return {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:41:	const timeoutId = setTimeout(controller.abort.bind(controller), timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:46:		clearTimeout(timeoutId);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CiMZVqut.js:59:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skill-commands-uwHRWdJn.js:130:			pollInterval: 100
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skill-commands-uwHRWdJn.js:356:	if (message?.includes("invoke timed out") || message?.includes("timeout")) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skill-commands-uwHRWdJn.js:476:			timeoutMs: params.timeoutMs ?? 15e3
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skill-commands-uwHRWdJn.js:485:			timeoutMs: params.timeoutMs ?? 15e3
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:28:import "./with-timeout-C9erkaIg.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:147:const INVALID_TIMEOUT_ERROR = "--timeout must be a positive integer (seconds)";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:148:function parseTimeoutMsOrExit(timeout) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:149:	const timeoutMs = timeout ? Number.parseInt(timeout, 10) * 1e3 : void 0;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:150:	if (timeoutMs !== void 0 && (Number.isNaN(timeoutMs) || timeoutMs <= 0)) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:155:	return timeoutMs;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:175:async function resolveTargetVersion(tag, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:180:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:233:		timeoutMs: params.timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:265:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:279:			timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:296:		const detected = await detectGlobalInstallManagerForRoot(runCommand, params.root, params.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:299:	return await detectGlobalInstallManagerByPresence(runCommand, params.timeoutMs) ?? "npm";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:337:	const timeoutMs = parseTimeoutMsOrExit(opts.timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:338:	if (timeoutMs === null) return;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:344:		timeoutMs: timeoutMs ?? 3500,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:586:timeout /t 2 /nobreak >nul
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:692:		], { timeoutMs: SERVICE_REFRESH_TIMEOUT_MS });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:736:		timeoutMs: params.timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:746:	const pkgRoot = await resolveGlobalPackageRoot(manager, runCommand, params.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:756:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:772:				timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:792:	const effectiveTimeout = params.timeoutMs ?? 20 * 6e4;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:795:		timeoutMs: effectiveTimeout,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:818:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:830:				timeoutMs: effectiveTimeout
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:833:			timeoutMs: effectiveTimeout,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:976:	const timeoutMs = parseTimeoutMsOrExit(opts.timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:978:	if (timeoutMs === null) return;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:982:		timeoutMs: timeoutMs ?? 3500,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1010:		const targetVersion = explicitTag ? await resolveTargetVersion(tag, timeoutMs) : await resolveNpmChannelTag({
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1012:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1065:		timeoutMs: timeoutMs ?? 20 * 6e4,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1072:		timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1129:	const timeoutMs = parseTimeoutMsOrExit(opts.timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1130:	if (timeoutMs === null) return;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1134:		timeoutMs: timeoutMs ?? 3500,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1218:			timeout: opts.timeout
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1232:	const timeout = opts.timeout;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1233:	if (timeout) return timeout;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1234:	return inheritOptionFromParent(command, "timeout");
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1237:	const update = program.command("update").description("Update OpenClaw and inspect update channel status").option("--json", "Output result as JSON", false).option("--no-restart", "Skip restarting the gateway service after a successful update").option("--channel <stable|beta|dev>", "Persist update channel (git + npm)").option("--tag <dist-tag|version>", "Override npm dist-tag or version for this update").option("--timeout <seconds>", "Timeout for each update step in seconds (default: 1200)").option("--yes", "Skip confirmation prompts (non-interactive)", false).addHelpText("after", () => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1261:  - Combine with --channel/--tag/--restart/--json/--timeout as needed
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1280:				timeout: opts.timeout,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1288:	update.command("wizard").description("Interactive update wizard").option("--timeout <seconds>", "Timeout for each update step in seconds (default: 1200)").addHelpText("after", `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/update", "docs.openclaw.ai/cli/update")}\n`).action(async (opts, command) => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1290:			await updateWizardCommand({ timeout: inheritedUpdateTimeout(opts, command) });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1296:	update.command("status").description("Show update channel and version status").option("--json", "Output result as JSON", false).option("--timeout <seconds>", "Timeout for update checks in seconds (default: 3)").addHelpText("after", () => `\n${theme.heading("Examples:")}\n${formatHelpExamples([
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1299:		["openclaw update status --timeout 10", "Custom timeout."]
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/update-cli-DpqAcDO3.js:1304:				timeout: inheritedUpdateTimeout(opts, command)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/cli-C42KdmSr.js:25:import "./with-timeout-C9erkaIg.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/thinking-EAliFiVK.js:200:		"streaming",
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/trash-DXPbQEbW.js:9:		await runExec("trash", [targetPath], { timeoutMs: 1e4 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:6:import { t as bindAbortRelay } from "./fetch-timeout-BheTNyes.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:30:	const { timeoutMs, signal } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:31:	if (!timeoutMs && !signal) return {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:35:	if (!timeoutMs) return {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:40:	const timeoutId = setTimeout(controller.abort.bind(controller), timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:45:		clearTimeout(timeoutId);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/local-roots-CkICMIko.js:58:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tool-loop-detection-D7w0itwC.js:246:		log.error(`Critical polling loop detected: ${toolName} repeated ${noProgressStreak} times`);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tool-loop-detection-D7w0itwC.js:252:			message: `CRITICAL: Called ${toolName} with identical arguments and no progress ${noProgressStreak} times. This appears to be a stuck polling loop. Session execution blocked to prevent resource waste.`,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tool-loop-detection-D7w0itwC.js:263:			message: `WARNING: You have called ${toolName} ${noProgressStreak} times with identical arguments and no progress. Stop polling and either (1) increase wait time between checks, or (2) report the task as failed if the process is stuck.`,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:9:import { n as fetchWithTimeout } from "./fetch-timeout-L2NTusph.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:113:async function fetchWithTimeoutGuarded(url, init, timeoutMs, fetchFn, options) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:118:		timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:168:	}, params.timeoutMs, fetchFn, allowPrivate ? { ssrfPolicy: { allowPrivateNetwork: true } } : void 0);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:216:	}, params.timeoutMs, fetchFn, allowPrivate ? { ssrfPolicy: { allowPrivateNetwork: true } } : void 0);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:313:	}, params.timeoutMs, fetchFn, allowPrivate ? { ssrfPolicy: { allowPrivateNetwork: true } } : void 0);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:815:			const fetchImpl = (input, init) => fetchWithTimeout(resolveRequestUrl(input), init ?? {}, params.timeoutMs, fetch);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:835:			if (isAbortError(err)) throw new MediaUnderstandingSkipError("timeout", `Attachment ${params.attachmentIndex + 1} timed out while fetching.`);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:861:			timeoutMs: params.timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1149:		timeoutMs: resolveTimeoutMs(entry.timeoutSeconds ?? params.config?.timeoutSeconds ?? cfg.tools?.media?.[capability]?.timeoutSeconds, DEFAULT_TIMEOUT_SECONDS[capability]),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1188:	const { maxBytes, maxChars, timeoutMs, prompt } = resolveEntryRunOptions({
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1201:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1211:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1223:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1245:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1280:				timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1296:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1319:			timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1335:	const { maxBytes, maxChars, timeoutMs, prompt } = resolveEntryRunOptions({
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1344:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1362:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/runner-DwyZwgW-.js:1470:			], { timeoutMs: 8e3 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:959:	const timeoutSeconds = typeof transcriber?.timeoutSeconds === "number" ? transcriber?.timeoutSeconds : void 0;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:965:	if (timeoutSeconds !== void 0) result.timeoutSeconds = timeoutSeconds;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1205:		id: "telegram.requireMention->channels.telegram.groups.*.requireMention",
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1206:		describe: "Move telegram.requireMention to channels.telegram.groups.*.requireMention",
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1209:			const telegram = channels.telegram;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1219:				changes.push("Moved telegram.requireMention → channels.telegram.groups.\"*\".requireMention.");
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1220:			} else changes.push("Removed telegram.requireMention (channels.telegram.groups.\"*\" already set).");
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1222:			channels.telegram = telegram;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1635:		message: "telegram config moved to channels.telegram (auto-migrated on load)."
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:1703:		message: "telegram.requireMention was removed; use channels.telegram.groups.\"*\".requireMention instead (auto-migrated on load)."
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2286:		timeoutMs: z.number().int().min(1e3).max(12e4).optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2290:	timeoutMs: z.number().int().min(1e3).max(12e4).optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2401:	timeoutSeconds: z.number().int().positive().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2442:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2457:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2477:	timeoutSeconds: z.number().int().positive().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2483:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2662:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2679:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2734:	timeoutSec: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2829:			pollIntervalMs: z.number().int().nonnegative().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2830:			timeoutMinutes: z.number().int().positive().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:2974:		streaming: z.boolean().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3051:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3187:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3509:	if (typeof value.streaming === "boolean") {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3514:		value.streaming = false;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3519:		value.streaming = true;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3523:	value.streaming = false;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3547:	streaming: z.boolean().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3557:	timeoutSeconds: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3561:	webhookUrl: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3562:	webhookSecret: z.string().optional().register(sensitive),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3563:	webhookPath: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3564:	webhookHost: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3594:		message: "channels.telegram.dmPolicy=\"open\" requires channels.telegram.allowFrom to include \"*\""
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3605:		message: "channels.telegram.dmPolicy=\"open\" requires channels.telegram.allowFrom to include \"*\""
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3608:	const baseWebhookUrl = typeof value.webhookUrl === "string" ? value.webhookUrl.trim() : "";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3609:	const baseWebhookSecret = typeof value.webhookSecret === "string" ? value.webhookSecret.trim() : "";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3612:		message: "channels.telegram.webhookUrl requires channels.telegram.webhookSecret",
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3613:		path: ["webhookSecret"]
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3619:		if (!(typeof account.webhookUrl === "string" ? account.webhookUrl.trim() : "")) continue;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3620:		if (!(typeof account.webhookSecret === "string" ? account.webhookSecret.trim() : "") && !baseWebhookSecret) ctx.addIssue({
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3622:			message: "channels.telegram.accounts.*.webhookUrl requires channels.telegram.webhookSecret or channels.telegram.accounts.*.webhookSecret",
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3626:				"webhookSecret"
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3842:	webhookPath: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3843:	webhookUrl: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3905:	webhookPath: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3925:	streaming: z.boolean().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:3973:	webhookPath: z.string().optional().default("/slack/events"),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4218:	webhookPath: z.string().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4279:	webhook: z.object({
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4601:	timeoutMs: z.number().int().nonnegative().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4639:			timeoutMs: z.number().int().nonnegative().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4775:		webhook: HttpUrlSchema.optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4776:		webhookToken: z.string().optional().register(sensitive),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4922:					timeoutMs: z.number().int().positive().optional(),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:4935:					timeoutMs: z.number().int().positive().optional()
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:5598:					timeoutMs: resolveShellEnvFallbackTimeoutMs(deps.env)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/config-B9RhcgPL.js:5641:				timeoutMs: cfg.env?.shellEnv?.timeoutMs ?? resolveShellEnvFallbackTimeoutMs(deps.env)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:62:async function downloadFile(url, destPath, timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:65:		timeoutMs: Math.max(1e3, timeoutMs)
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:79:	const { archivePath, archiveType, targetDir, stripComponents, timeoutMs } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:86:				timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:100:				timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:121:			], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:132:			], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:168:			return await runCommandWithTimeout(argv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:184:	const { entry, spec, timeoutMs } = params;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:221:		downloaded = (await downloadFile(url, archivePath, timeoutMs)).bytes;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:252:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:381:async function resolveBrewBinDir(timeoutMs, brewExe) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:384:	const prefixResult = await runCommandWithTimeout([exe, "--prefix"], { timeoutMs: Math.min(timeoutMs, 3e4) });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:443:	], { timeoutMs: params.timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:450:async function installGoViaApt(timeoutMs) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:464:		await runBestEffortCommand(aptUpdateArgv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:465:		const aptResult = await runCommandSafely(aptInstallArgv, { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:477:	], { timeoutMs: 5e3 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:482:	await runBestEffortCommand(["sudo", ...aptUpdateArgv], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:483:	const aptResult = await runCommandSafely(["sudo", ...aptInstallArgv], { timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:497:		], { timeoutMs: params.timeoutMs });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:504:	if (hasBinary("apt-get")) return installGoViaApt(params.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:510:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:520:	const timeoutMs = Math.min(Math.max(params.timeoutMs ?? 3e5, 1e3), 9e5);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:541:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:556:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:562:		timeoutMs
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:569:		const brewBin = await resolveBrewBinDir(timeoutMs, brewExe);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/skills-install-DZS_DbXS.js:574:		timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/command-poll-backoff-BiwOFDEK.js:25:* @param state Session state to track polling in
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/devices-cli-Bmb4fMsQ.js:19:const devicesCallOpts = (cmd, defaults) => cmd.option("--url <url>", "Gateway WebSocket URL (defaults to gateway.remote.url when configured)").option("--token <token>", "Gateway token (if required)").option("--password <password>", "Gateway password (password auth)").option("--timeout <ms>", "Timeout in ms", String(defaults?.timeoutMs ?? 1e4)).option("--json", "Output JSON", false);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/devices-cli-Bmb4fMsQ.js:30:	timeoutMs: Number(opts.timeout ?? 1e4),
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/status.update-BJgJ15LQ.js:14:		timeoutMs: params.timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:58:import "./with-timeout-DeGd8bce.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:296:function parseTimeoutMs(timeout) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:297:	const parsed = parsePositiveIntOrUndefined(timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:298:	if (timeout !== void 0 && parsed === void 0) {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:299:		defaultRuntime.error("--timeout must be a positive integer (milliseconds)");
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:306:	program.command("status").description("Show channel health and recent session recipients").option("--json", "Output JSON instead of text", false).option("--all", "Full diagnosis (read-only, pasteable)", false).option("--usage", "Show model provider usage/quota snapshots", false).option("--deep", "Probe channels (WhatsApp Web + Telegram + Discord + Slack + Signal)", false).option("--timeout <ms>", "Probe timeout in milliseconds", "10000").option("--verbose", "Verbose logging", false).option("--debug", "Alias for --verbose", false).addHelpText("after", () => `\n${theme.heading("Examples:")}\n${formatHelpExamples([
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:312:		["openclaw status --deep --timeout 5000", "Tighten probe timeout."]
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:316:		const timeout = parseTimeoutMs(opts.timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:317:		if (timeout === null) return;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:324:				timeoutMs: timeout,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:329:	program.command("health").description("Fetch health from the running gateway").option("--json", "Output JSON instead of text", false).option("--timeout <ms>", "Connection timeout in milliseconds", "10000").option("--verbose", "Verbose logging", false).option("--debug", "Alias for --verbose", false).addHelpText("after", () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/health", "docs.openclaw.ai/cli/health")}\n`).action(async (opts) => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:332:		const timeout = parseTimeoutMs(opts.timeout);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:333:		if (timeout === null) return;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/register.status-health-sessions-CKDgnTXP.js:337:				timeoutMs: timeout,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:428:					timeoutMs: 1e4
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:444:	const timeoutMs = typeof params.timeoutMs === "number" && params.timeoutMs > 0 ? params.timeoutMs : 1e4;
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:449:			timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:464:				timeoutMs: 5e3
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:466:			timeoutMs: 6e3
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:923:		timeoutMs: 1200 * 1e3,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:939:		], { timeoutMs: 5e3 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:951:		], { timeoutMs: 5e3 });
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:1528:					timeoutMs: 12e4,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:1549:			], { timeoutMs: 5e3 }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:1569:						timeoutMs: 12e4,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:1592:	], { timeoutMs: 5e3 }).catch(() => null);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/prompt-select-styled-BkA1GgcD.js:1868:		timeoutMs: options.nonInteractive === true ? 3e3 : 1e4
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tui-cli-CeNab99f.js:50:import { t as parseTimeoutMs } from "./parse-timeout-UOA56UND.js";
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tui-cli-CeNab99f.js:55:	program.command("tui").description("Open a terminal UI connected to the Gateway").option("--url <url>", "Gateway WebSocket URL (defaults to gateway.remote.url when configured)").option("--token <token>", "Gateway token (if required)").option("--password <password>", "Gateway password (if required)").option("--session <key>", "Session key (default: \"main\", or \"global\" when scope is global)").option("--deliver", "Deliver assistant replies", false).option("--thinking <level>", "Thinking level override").option("--message <text>", "Send an initial message after connecting").option("--timeout-ms <ms>", "Agent timeout in ms (defaults to agents.defaults.timeoutSeconds)").option("--history-limit <n>", "History entries to load", "200").addHelpText("after", () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/tui", "docs.openclaw.ai/cli/tui")}\n`).action(async (opts) => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tui-cli-CeNab99f.js:57:			const timeoutMs = parseTimeoutMs(opts.timeoutMs);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tui-cli-CeNab99f.js:58:			if (opts.timeoutMs !== void 0 && timeoutMs === void 0) defaultRuntime.error(`warning: invalid --timeout-ms "${String(opts.timeoutMs)}"; ignoring`);
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/tui-cli-CeNab99f.js:68:				timeoutMs,
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/push-apns-DuvuP-PA.js:573:		req.setTimeout(params.timeoutMs, () => {
+/home/openclaw/.nvm/versions/node/v25.6.1/lib/node_modules/openclaw/dist/push-apns-DuvuP-PA.js:575:			fail(/* @__PURE__ */ new Error(`APNs request timed out after ${params.timeoutMs}ms`));

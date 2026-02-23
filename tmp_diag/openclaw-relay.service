@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenClaw Browser Relay bootstrap (port 18792)
+After=openclaw-gateway.service
+Requires=openclaw-gateway.service
+
+[Service]
+Type=oneshot
+User=openclaw
+WorkingDirectory=/home/openclaw
+Environment=HOME=/home/openclaw
+RemainAfterExit=yes
+TimeoutStartSec=60
+ExecStart=/bin/bash -lc 'source /home/openclaw/.nvm/nvm.sh; openclaw browser start >/dev/null 2>&1 || true'
+ExecStop=/bin/true
+
+[Install]
+WantedBy=multi-user.target

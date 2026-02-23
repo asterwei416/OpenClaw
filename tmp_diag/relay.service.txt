@@ -1,0 +1,16 @@
+[Unit]
+Description=OpenClaw Browser Relay watchdog (port 18792)
+After=openclaw-gateway.service
+PartOf=openclaw-gateway.service
+
+[Service]
+Type=simple
+User=openclaw
+WorkingDirectory=/home/openclaw
+Environment=HOME=/home/openclaw
+Restart=always
+RestartSec=3
+ExecStart=/bin/bash -lc 'source /home/openclaw/.nvm/nvm.sh; while true; do if ss -tlnp | grep -q 18789; then if ! ss -tlnp | grep -q 18792; then openclaw browser start >/dev/null 2>&1 || true; fi; fi; sleep 3; done'
+
+[Install]
+WantedBy=multi-user.target

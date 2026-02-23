@@ -1,0 +1,25 @@
+total 96
+drwx------ 15 openclaw openclaw 4096 Feb 22 22:35 .
+drwxr-x--- 16 openclaw openclaw 4096 Feb 22 21:19 ..
+drwx------  3 openclaw openclaw 4096 Feb 21 21:18 agents
+drwxr-xr-x  3 openclaw openclaw 4096 Feb 23 08:16 browser
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 21 08:56 canvas
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 21 21:22 completions
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 21 21:36 credentials
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 23 10:27 cron
+drwxrwxr-x  2 openclaw openclaw 4096 Feb 23 07:21 devices
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 21 21:32 identity
+drwx------  2 openclaw openclaw 4096 Feb 22 12:01 logs
+drwx------  3 openclaw openclaw 4096 Feb 22 12:41 media
+drwxr-xr-x  2 openclaw openclaw 4096 Feb 21 21:19 memory
+-rw-------  1 openclaw openclaw 1664 Feb 22 20:35 openclaw.json
+-rw-------  1 openclaw openclaw 1736 Feb 22 20:29 openclaw.json.after-ab-1771763363.bak
+-rw-------  1 openclaw openclaw 1699 Feb 22 20:35 openclaw.json.bak
+-rw-------  1 openclaw openclaw 1488 Feb 22 20:27 openclaw.json.bak.
+-rw-------  1 openclaw openclaw 1608 Feb 22 20:34 openclaw.json.bak.1
+-rw-------  1 openclaw openclaw 1488 Feb 22 11:53 openclaw.json.bak.2
+-rw-------  1 openclaw openclaw 1488 Feb 22 11:35 openclaw.json.bak.3
+-rw-------  1 openclaw openclaw 1488 Feb 22 11:26 openclaw.json.bak.4
+drwx------  2 openclaw openclaw 4096 Feb 23 10:27 telegram
+-rw-r--r--  1 openclaw openclaw  120 Feb 23 09:38 update-check.json
+drwxrwxr-x  6 openclaw openclaw 4096 Feb 22 12:41 workspace

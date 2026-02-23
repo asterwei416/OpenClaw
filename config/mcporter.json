@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/mnt/c/Users/trist/Desktop/Google_Antigravity/Side Project/OpenClaw",
+        "/home/openclaw"
+      ]
+    },
+    "google-search": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@adenot/mcp-google-search"
+      ],
+      "env": {
+        "GOOGLE_API_KEY": "AIzaSyAxHQKJOniFw8pBNwxZdgyl4gTfGqPpXBE",
+        "GOOGLE_SEARCH_ENGINE_ID": "f2e966b9ae65b471a",
+        "GOOGLE_CX": "f2e966b9ae65b471a"
+      }
+    },
+    "google-workspace": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-google-workspace"
+      ],
+      "env": {
+        "GOOGLE_CLIENT_ID": "762797721491-kcumk3mhbbjdg2hejfskclrlspg3rigf.apps.googleusercontent.com",
+        "GOOGLE_CLIENT_SECRET": "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",
+        "GOOGLE_USER_EMAIL": "tristan416@gmail.com",
+        "GOOGLE_REFRESH_TOKEN": "1//0eoNnYGegwqPdCgYIARAAGA4SNwF-L9IrVKjxnLh3Jd0WE5RbimQtYpmRm7oNlR7Ej0NOMBe9dp92gS5NvQ0Vci1Xvjr0la7X22Q"
+      }
+    }
+  },
+  "imports": []
+}

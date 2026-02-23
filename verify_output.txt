@@ -1,0 +1,39 @@
+=== recover ===
+=== wait ===
+ports_ready_in=38s
+=== final ===
+??openclaw-gateway.service - OpenClaw Gateway (system)
+     Loaded: loaded (/etc/systemd/system/openclaw-gateway.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-02-23 08:04:06 CST; 41s ago
+   Main PID: 695 (openclaw-gatewa)
+      Tasks: 11 (limit: 18994)
+     Memory: 1.3G (peak: 1.3G)
+        CPU: 53.276s
+     CGroup: /system.slice/openclaw-gateway.service
+             ??695 openclaw-gateway
+
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.455Z [canvas] host mounted at http://127.0.0.1:18789/__openclaw__/canvas/ (root /home/openclaw/.openclaw/canvas)
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.638Z [heartbeat] started
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.644Z [health-monitor] started (interval: 300s, grace: 60s)
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.651Z [gateway] agent model: google/gemini-2.5-flash
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.654Z [gateway] listening on ws://127.0.0.1:18789 (PID 695)
+Feb 23 08:04:46 AsterWei node[695]: 2026-02-23T00:04:46.656Z [gateway] listening on ws://[::1]:18789
+---
+??openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792)
+     Loaded: loaded (/etc/systemd/system/openclaw-relay.service; enabled; preset: enabled)
+     Active: active (running) since Mon 2026-02-23 08:04:06 CST; 41s ago
+   Main PID: 705 (bash)
+      Tasks: 2 (limit: 18994)
+     Memory: 4.6M (peak: 13.3M)
+        CPU: 469ms
+     CGroup: /system.slice/openclaw-relay.service
+             ?? 705 /bin/bash -lc "source /home/openclaw/.nvm/nvm.sh; while true; do if ss -tlnp | grep -q 18789; then if ! ss -tlnp | grep -q 18792; then openclaw browser start >/dev/null 2>&1 || true; fi; fi; sleep 3; done"
+             ??1190 sleep 3
+
+Feb 23 08:04:06 AsterWei systemd[1]: Started openclaw-relay.service - OpenClaw Browser Relay watchdog (port 18792).
+---
+LISTEN 0      511         127.0.0.1:18792      0.0.0.0:*    users:(("openclaw-gatewa",pid=695,fd=29))
+LISTEN 0      511         127.0.0.1:18789      0.0.0.0:*    users:(("openclaw-gatewa",pid=695,fd=22))
+LISTEN 0      511             [::1]:18789         [::]:*    users:(("openclaw-gatewa",pid=695,fd=23))
+OK
+curl_exit=0
