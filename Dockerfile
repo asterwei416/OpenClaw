@@ -51,5 +51,4 @@ USER node
 CMD echo "[OpenClaw] Starting with Primary Model: google/gemini-2.5-flash" && \
   node dist/index.js config set agents.defaults.model.primary google/gemini-2.5-flash && \
   node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \
-  node dist/index.js plugins install ./dist/plugins/tavily-search.js && \
   node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
