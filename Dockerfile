@@ -45,4 +45,6 @@ USER node
 # For container platforms requiring external health checks:
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","dist/index.js","gateway","--allow-unconfigured","--bind","lan"]
-CMD ["node", "dist/index.js", "gateway", "--allow-unconfigured", "--bind", "lan", "--port", "8080"]
+CMD node dist/index.js config set agents.defaults.model.primary google/gemini-2.5-flash && \\
+  node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \\
+  node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
