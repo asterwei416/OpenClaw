@@ -47,4 +47,6 @@ USER node
 #   2. Override CMD: ["node","dist/index.js","gateway","--allow-unconfigured","--bind","lan"]
 CMD node dist/index.js config set agents.defaults.model.primary google/gemini-2.5-flash && \
   node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \
+  node dist/index.js config set auth.profiles.google "{ provider: 'google', mode: 'api_key', apiKey: '${GEMINI_API_KEY}' }" && \
+  node dist/index.js config set auth.order.google '["google"]' && \
   node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
