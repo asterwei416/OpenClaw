@@ -45,8 +45,7 @@ USER node
 # For container platforms requiring external health checks:
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","dist/index.js","gateway","--allow-unconfigured","--bind","lan"]
-CMD mkdir -p /home/node/.openclaw/agents/main/agent && \
-  echo "{\"profiles\":{\"google\":{\"type\":\"api_key\",\"apiKey\":\"${GEMINI_API_KEY}\"}}}" > /home/node/.openclaw/agents/main/agent/auth-profiles.json && \
-  node dist/index.js config set agents.defaults.model.primary google/gemini-2.5-flash && \
-  node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \
-  node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
+CMD echo "[OpenClaw] Starting with Primary Model: google/gemini-2.5-flash" && \
+    node dist/index.js config set agents.defaults.model.primary google/gemini-2.5-flash && \
+    node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \
+    node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
