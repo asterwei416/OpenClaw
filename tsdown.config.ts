@@ -31,4 +31,11 @@ export default defineConfig([
     fixedExtension: false,
     platform: "node",
   },
+  {
+    entry: "src/plugins/tavily-search.ts",
+    outDir: "dist/plugins",
+    env,
+    fixedExtension: false,
+    platform: "node",
+  },
 ]);
