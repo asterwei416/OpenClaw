@@ -647,6 +647,13 @@ export async function runNodeHost(opts: NodeHostRunOptions): Promise<void> {
   });
 
   client.start();
+  if (browserProxyEnabled) {
+    // Eagerly start the browser control service so the Chrome extension relay (18792) opens immediately
+    ensureBrowserControlService().catch((err) => {
+      // eslint-disable-next-line no-console
+      console.error(`[Node Host] browser proxy init failed: ${String(err)}`);
+    });
+  }
   await new Promise(() => {});
 }
 
