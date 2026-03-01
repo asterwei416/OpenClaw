@@ -113,6 +113,26 @@ _安裝完成後，務必將變更 `git add .` 並 commit。_
 
 ---
 
+## 階段 4.5：雲端終端機互動與模型配置 (Terminal & Setup)
+
+佈署完成後，若機器人已顯示「Running」，你可能需要透過 Zeabur 提供的手動終端機來進行最後的微調（例如切換模型或檢查狀態）。
+
+1. **進入雲端終端機**：
+   - 點擊服務左側選單的 **Terminal** (終端機) 頁籤。
+   - 看到提示字元後即可開始輸入指令。
+2. **自我診斷 (OpenClaw Doctor)**：
+   - 輸入 `openclaw doctor` 可檢查當前伺服器環境的套件安裝狀況與設定檔是否正確。
+3. **設定預設模型 (Model Setup)**：
+   - 雖然這也可以透過 `mcporter.json` 手動修改，但你也透過終端機進行互動式設定：
+     ```bash
+     openclaw model set
+     ```
+   - 遵循提示選擇你要使用的 LLM 服務商（OpenAI, Anthropic 等）與特定的模型名稱。
+4. **確認持久化路徑**：
+   - 在終端機輸入 `openclaw config path` 確保路徑指向 `/root/.openclaw`。這樣你剛才掛載的 Volume 才會生效，模型設定才不會在重啟後消失。
+
+---
+
 ## 階段 5：環境變數配置 (Environment Variables)
 
 佈署完成後，千萬不可把密碼寫死在 Code 裡，我們必須透過 Zeabur 控制台安全地注入 Tokens。
