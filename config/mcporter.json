@@ -38,10 +38,7 @@
         "mcp-server-google-workspace"
       ],
       "env": {
-        "GOOGLE_CLIENT_ID": "762797721491-kcumk3mhbbjdg2hejfskclrlspg3rigf.apps.googleusercontent.com",
-        "GOOGLE_CLIENT_SECRET": "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",
-        "GOOGLE_USER_EMAIL": "tristan416@gmail.com",
-        "GOOGLE_REFRESH_TOKEN": "1//0eoNnYGegwqPdCgYIARAAGA4SNwF-L9IrVKjxnLh3Jd0WE5RbimQtYpmRm7oNlR7Ej0NOMBe9dp92gS5NvQ0Vci1Xvjr0la7X22Q"
+        "GOOGLE_USER_EMAIL": "tristan416@gmail.com"
       }
     }
   },

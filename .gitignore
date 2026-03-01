@@ -81,3 +81,8 @@ USER.md
 storage/
 sessions/
 .auth/
+
+credentials.json
+.gcalcli_oauth
+openclaw_calendar.py
+test_calendar.js
