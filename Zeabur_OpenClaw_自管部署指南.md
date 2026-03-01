@@ -154,34 +154,34 @@ openclaw skill install browser-tools
 
 _這會在工作區中更新設定檔與相應的 `/skills` 目錄，請務必將相關變更 `git add .` 並 commit。_
 
-### 6.2 取得 Google Calendar API 憑證 (OAuth 2.0 Client ID)
+### 6.2 取得 Google Calendar API 憑證 (重要！請嚴格遵守類型)
 
-要串接 Google 日曆，必須先到 Google 雲端平台申請專屬的金鑰檔案（`credentials.json`）。這是一個「只要設定一次就一勞永逸」的必要關卡：
+要串接 Google 日曆，必須先到 Google 雲端平台申請金鑰。請注意，為了支援雲端無介面授權，**我們必須選擇 Web 類型**：
 
 1. **建立專案**：登入 [Google Cloud Console](https://console.cloud.google.com/) 並建立一個新專案。
-2. **啟用日曆 API**：進入左側選單的「**API 和服務 (APIs & Services)**」>「**資料庫 (Library)**」，搜尋「**Google Calendar API**」並點擊啟用 (Enable)。
+2. **啟用日曆 API**：進入左側選單的「**API 和服務**」>「**資料庫**」，搜尋「**Google Calendar API**」並點擊啟用。
 3. **設定 OAuth 同意畫面**：
-   - 進入左側選單「**OAuth 同意畫面 (OAuth consent screen)**」。
-   - User Type 選擇「外部 (External)」，點擊建立。
-   - 填寫必填的「應用程式名稱」與「支援 Email」，其餘留白即可。
-   - **【最重要的一步】保護級別測試**：在「測試使用者 (Test users)」的設定頁面中，點擊 `Add Users`，**務必手動輸入你打算與小龍蝦綁定的 Google 帳號 Email**。如果不加，稍後小龍蝦會拿不到權限！
-4. **下載金鑰檔案**：
-   - 進入左側選單「**憑證 (Credentials)**」。
-   - 點選上方「建立憑證 (Create Credentials)」> 選擇「OAuth 用戶端 ID (OAuth client ID)」。
-   - 應用程式類型選擇「電腦版應用程式 (Desktop app)」，隨意取個名稱後點擊建立。
-   - 建立成功後，你會看到下載按鈕 (`Download JSON`)。下載後將其**重新命名為 `credentials.json`** 放在你電腦安全的地方。
+   - 進入「**OAuth 同意畫面**」，User Type 選擇「外部」，點擊建立。
+   - 填寫「應用程式名稱」與「支援 Email」。
+   - **【最重要：環境白名單】**：在「測試使用者 (Test users)」頁面，點擊 `Add Users`，手動加入你的 Google 帳號。
+   - **【永久化關鍵：Publish App】**：**務必點擊「發布應用程式」按鈕**，將狀態從「測試環境」轉為「正式發布」。若未執行此步，你的 Token 七天後就會失效。
+4. **建立 Web 類型憑證**：
+   - 進入「**憑證 (Credentials)**」>「**建立憑證**」>「**OAuth 用戶端 ID**」。
+   - **應用程式類型**：務必選擇 **「網頁應用程式 (Web application)」**。
+   - **已授權的重新導向 URI**：點擊 `+新增 URI`，貼上 `https://developers.google.com/oauthplayground`
+   - 點擊建立，並記下產生的 **Client ID** 與 **Client Secret**。
 
-### 6.2.1 本機瀏覽器實名授權 (取得長效通行證)
+### 6.2.1 使用 OAuth Playground 獲取長效 Token
 
-拿到金鑰只是第一步，Google 規定必須由使用者**親自點擊同意**才能發放永久通行證。因為 Zeabur 是無網頁介面的 Linux 伺服器，我們必須先在「你的本機電腦」跑一次授權：
+因為 Zeabur 是遠端 Linux，我們不透過本機 Python，而是直接使用 Google 官方工具拿取權杖：
 
-1. 電腦需安裝 Python `pip install gcalcli`
-2. 建立目錄放置剛才的密碼：`mkdir ~/.gcalcli`，並將那把 `credentials.json` 複製進去更名為 `client_secret.json`。
-3. 在終端機執行：`gcalcli agenda`
-4. 終端機會要求你輸入 **Client ID** 與 **Client Secret**（打開你剛才下載的 JSON 檔案複製貼上）。
-5. 接著會彈出電腦瀏覽器，請登入 Test User 的帳號並點擊「允許」。
-6. 授權成功後，你的電腦就會產生一個重要的長效通行證隱藏檔：
-   - Windows 預設路徑：`C:\Users\你的帳號\AppData\Local\gcalcli\gcalcli\oauth` (或是 `~/.gcalcli_oauth`)
+1. 前往 [OAuth 2.0 Playground](https://developers.google.com/oauthplayground/)。
+2. 點擊右上角 **齒輪 (Settings)**：
+   - 勾選 `Use your own OAuth credentials`。
+   - 填入你剛才拿到的 **Client ID** 與 **Client Secret**。
+3. **Step 1 (授權)**：左側找到 **Calendar API v3**，勾選 `.../auth/calendar`，點擊藍色 **Authorize APIs** 並在彈出視窗點選允許。
+4. **Step 2 (交換)**：點擊藍色按鈕 **Exchange authorization code for tokens**。
+5. **拿取結果**：複製下方出現的 **`Refresh token`**。這串字元就是小龍蝦在雲端的「永久通行證」。
 
 > ⚠️ **嚴重警告**：`credentials.json` 與剛生出來的 `oauth` 通行證絕對不可 commit 上傳到 GitHub！請緊接著進行配置與安全注入處理。
 
