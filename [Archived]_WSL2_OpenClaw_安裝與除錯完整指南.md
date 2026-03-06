@@ -20,6 +20,7 @@
 8. [OpenClaw 配置](#8-openclaw-配置)
 9. [環境驗證](#9-環境驗證)
 10. [常見錯誤排查](#10-常見錯誤排查)
+11. [進階設定：為 OpenClaw 綁定 Google 行事曆](#11-進階設定為-openclaw-綁定-google-行事曆)
 
 ---
 
@@ -55,6 +56,7 @@ wsl --install
 ```
 
 這個指令會自動：
+
 - 啟用 Windows Subsystem for Linux
 - 啟用虛擬機器平台
 - 下載並安裝 Ubuntu（預設發行版）
@@ -327,6 +329,7 @@ Set objShell = Nothing
 ### 5.1 為什麼需要 Python？
 
 OpenClaw 的許多 Skills 依賴 Python，例如：
+
 - `python-docx`：Word 文件處理
 - `requests`：HTTP 請求
 - `beautifulsoup4`：網頁解析
@@ -752,6 +755,82 @@ openclaw doctor --fix
 rm -rf ~/.openclaw
 openclaw config list
 ```
+
+---
+
+## 11. 進階設定：為 OpenClaw 綁定 Google 行事曆
+
+OpenClaw 若要讀取或寫入你的 Google 行事曆（使用 `gcalcli-calendar` 或 `gog-calendar` 技能），必須先取得並設定 Google OAuth 2.0 憑證。以最常用的 `gcalcli` 為例，完整設定流程如下：
+
+### 11.1 安裝系統相依套件與技能
+
+首先，我們需要在 WSL2 中安裝 `gcalcli` 核心程式：
+
+```bash
+# 更新套件庫並安裝 gcalcli
+sudo apt update
+sudo apt install gcalcli -y
+
+# 驗證安裝是否成功
+gcalcli --version
+```
+
+接著在 OpenClaw 中啟用對應的日曆技能（請依 Clawhub 或套件實際名稱執行）：
+
+```bash
+openclaw skill install gcalcli-calendar
+```
+
+### 11.2 申請 Google API 憑證 (OAuth 2.0)
+
+為了確保安全性，你必須申請自己專屬的 Google 應用程式憑證：
+
+1. 前往 [Google Cloud Console](https://console.cloud.google.com/)。
+2. 點擊頂部導覽列建立一個**新專案**（例如命名為 `OpenClaw-Calendar`）。
+3. 前往左側選單的 **API 與服務 > 程式庫**，搜尋 **Google Calendar API**，點擊「啟用」。
+4. 前往 **API 與服務 > OAuth 同意畫面**：
+   - 使用者類型選擇 **外部**。
+   - 填寫必填欄位（應用程式名稱填寫 OpenClaw 等）。
+   - 在「測試使用者」區塊，加上**你自己的 Google 帳號 Email**。
+5. 前往 **API 與服務 > 憑證**：
+   - 點擊上方的 **+ 建立憑證 > OAuth 用戶端 ID**。
+   - 應用程式類型選擇 **電腦版應用程式** (Desktop app)。
+   - 點擊「建立」後，會出現彈出視窗，請點擊「下載 JSON」將憑證存回電腦（檔名通常為 `client_secret_xxx.json`）。
+
+### 11.3 存放憑證並進行首次授權
+
+由於 WSL2 沒有圖形介面，我們需要使用命令列授權模式：
+
+```bash
+# 1. 在 WSL 建立配置目錄
+mkdir -p ~/.gcalcli
+
+# 2. 將你下載在 Windows 的 JSON 檔案複製進 WSL，並重新命名為 client_secret.json
+# （請更換為你實際的路徑，例如 Windows 的 Downloads 資料夾：/mnt/c/Users/你的使用者名稱/Downloads/... ）
+cp /mnt/c/Users/你的使用者名稱/Downloads/client_secret_*.json ~/.gcalcli/client_secret.json
+
+# 3. 執行首次驗證指令，告訴它使用無圖形介面 (noauth_local_webserver)
+gcalcli --noauth_local_webserver agenda
+```
+
+執行後，終端機會顯示一大串 **URL 網址**：
+
+1. **複製這段網址**，並貼到你 Windows 裡的瀏覽器。
+2. 登入你剛剛設定的 Google 帳號，點擊允許授權授權（若出現「Google 尚未驗證應用程式」的警告，點擊「進階 > 繼續前往」）。
+3. 網頁最後會顯示一段 **Auth Code（授權碼）**。
+4. **將這段 Auth Code 複製貼回 WSL2 終端機**，按下 Enter。
+
+> **驗證完畢**：成功後，目錄下會自動產生隱藏檔 `~/.gcalcli_oauth` 存放授權 Token，接下來即使重開機也無需再認證了。
+
+### 11.4 驗證同步功能
+
+在終端機中測試看近幾天的行程：
+
+```bash
+gcalcli agenda
+```
+
+若能成功印出這幾天的行程與時間，代表本地的 Google 行事曆連線已打通！OpenClaw 後續只要呼叫這個技能，就能無縫讀寫你的 Calendar 了。
 
 ---
 
