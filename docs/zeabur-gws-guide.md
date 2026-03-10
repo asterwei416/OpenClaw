@@ -1,6 +1,6 @@
 # Google Workspace CLI 部署與設定指南 (Zeabur 環境)
 
-本指南說明如何在 Zeabur 平台上成功部署與執行 `@openclaw/google-workspace` 擴充套件。我們已在 OpenClaw 的 Dockerfile 中配置了必要的環境，並且設定 `gws` (Google Workspace CLI) 使用獨立的授權目錄 `/home/node/.openclaw/gws_auth`。
+本指南說明如何在 Zeabur 平台上成功部署與執行 `@openclaw/google-workspace` 擴充套件。我們已在 OpenClaw 的 Dockerfile 中配置了必要的環境，並且設定 `gws` (Google Workspace CLI) 使用獨立的授權目錄 `/root/.openclaw/gws_auth`。
 
 ## 1. Zeabur Volume 設定 (必要步驟)
 
@@ -8,12 +8,11 @@
 
 1. 到 Zeabur 儀表板選擇您的 `OpenClaw` 服務。
 2. 進入「**Volumes (儲存空間)**」分頁。
-3. 點選「Add Volume (新增儲存空間)」。
-4. 將掛載路徑 (Mount Path) 設為：`/home/node/.openclaw`
-5. 儲存並重啟服務 (Restart Service)。
+3. 確保名為 `brain`（或您自訂的名稱）的 Volume，其掛載路徑保持為：`/root/.openclaw`
+4. 儲存並重啟服務 (Restart Service)。
 
 > 💡 **為何是這個路徑？**
-> 這會同步持久化 OpenClaw Agent 本身的狀態，同時我們已在 `Dockerfile` 中指定 `ENV GOOGLE_WORKSPACE_CLI_CONFIG_DIR=/home/node/.openclaw/gws_auth`，讓 Google Workspace CLI 放設定檔在這裡。注意，OpenClaw 是以 `node` 使用者運行，因此只有 `/home/node` 下具備存取權限。
+> 這會同步持久化 OpenClaw Agent 本身的狀態，同時我們已在 `Dockerfile` 中指定 `ENV GOOGLE_WORKSPACE_CLI_CONFIG_DIR=/root/.openclaw/gws_auth`，讓 Google Workspace CLI 放設定檔在這裡。為解決 `node` 使用者的讀寫權限，也已經在 Docker 內事先賦權。
 
 ## 2. 第一次登入驗證 (OAuth Login)
 

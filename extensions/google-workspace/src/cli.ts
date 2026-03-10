@@ -34,7 +34,7 @@ export async function execGws(commandArgs: string, api: OpenClawPluginApi): Prom
 
     // Auth specific error handling
     if (stdErrStr.includes("credentials") || stdErrStr.includes("auth") || stdErrStr.includes("Token") || errorMsg.includes("credentials")) {
-      throw new Error(`Google Workspace Auth Error. Please ensure you have authenticated via 'gws auth login' or your Zeabur Volume is mounted correctly at /home/node/.openclaw.\nDetails: ${stdErrStr || errorMsg}`, { cause: err });
+      throw new Error(`Google Workspace Auth Error. Please ensure you have authenticated via 'gws auth login' or your Zeabur Volume is mounted correctly at /root/.openclaw.\nDetails: ${stdErrStr || errorMsg}`, { cause: err });
     }
 
     throw new Error(`Google Workspace CLI Error: ${errorMsg}\nSTDOUT: ${stdOutStr}\nSTDERR: ${stdErrStr}`, { cause: err });
