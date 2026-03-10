@@ -176,14 +176,14 @@
         </div>
 
         <div class="card">
-          <h2>Relay port</h2>
-          <label for="port">Port</label>
+          <h2>Relay URL</h2>
+          <label for="url">Gateway URL</label>
           <div class="row">
-            <input id="port" inputmode="numeric" pattern="[0-9]*" />
+            <input id="url" type="url" placeholder="https://..." style="width: 240px;" />
             <button id="save" type="button">Save</button>
           </div>
           <div class="hint">
-            Default: <code>18792</code>. Extension connects to: <code id="relay-url">http://127.0.0.1:&lt;port&gt;/</code>.
+            Default: <code>http://127.0.0.1:18792/</code>. Enter your Gateway URL (e.g. Zeabur deployment URL).
             Only change this if your OpenClaw profile uses a different <code>cdpUrl</code> port.
           </div>
           <div class="status" id="status"></div>

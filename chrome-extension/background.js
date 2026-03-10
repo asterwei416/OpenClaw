@@ -1,4 +1,4 @@
-const DEFAULT_PORT = 18792
+
 
 const BADGE = {
   on: { text: 'ON', color: '#FF5A36' },
@@ -34,12 +34,21 @@ function nowStack() {
   }
 }
 
-async function getRelayPort() {
-  const stored = await chrome.storage.local.get(['relayPort'])
-  const raw = stored.relayPort
-  const n = Number.parseInt(String(raw || ''), 10)
-  if (!Number.isFinite(n) || n <= 0 || n > 65535) return DEFAULT_PORT
-  return n
+const DEFAULT_URL = 'http://127.0.0.1:18792/'
+
+async function getRelayUrl() {
+  const stored = await chrome.storage.local.get(['relayUrl'])
+  const raw = stored.relayUrl
+  if (!raw || typeof raw !== 'string') return DEFAULT_URL
+  
+  let url = raw.trim()
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    url = 'http://' + url
+  }
+  if (!url.endsWith('/')) {
+    url += '/'
+  }
+  return url
 }
 
 function setBadge(tabId, kind) {
@@ -54,9 +63,13 @@ async function ensureRelayConnection() {
   if (relayConnectPromise) return await relayConnectPromise
 
   relayConnectPromise = (async () => {
-    const port = await getRelayPort()
-    const httpBase = `http://127.0.0.1:${port}`
-    const wsUrl = `ws://127.0.0.1:${port}/extension`
+    const httpBase = (await getRelayUrl()).replace(/\/$/, '')
+    let wsUrl = httpBase + '/extension'
+    if (wsUrl.startsWith('https://')) {
+      wsUrl = wsUrl.replace('https://', 'wss://')
+    } else if (wsUrl.startsWith('http://')) {
+      wsUrl = wsUrl.replace('http://', 'ws://')
+    }
 
     // Fast preflight: is the relay server up?
     try {

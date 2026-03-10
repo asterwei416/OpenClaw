@@ -1,16 +1,15 @@
-const DEFAULT_PORT = 18792
+const DEFAULT_URL = 'http://127.0.0.1:18792/'
 
-function clampPort(value) {
-  const n = Number.parseInt(String(value || ''), 10)
-  if (!Number.isFinite(n)) return DEFAULT_PORT
-  if (n <= 0 || n > 65535) return DEFAULT_PORT
-  return n
-}
-
-function updateRelayUrl(port) {
-  const el = document.getElementById('relay-url')
-  if (!el) return
-  el.textContent = `http://127.0.0.1:${port}/`
+function formatUrl(value) {
+  if (!value || typeof value !== 'string') return DEFAULT_URL
+  let url = value.trim()
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    url = 'http://' + url
+  }
+  if (!url.endsWith('/')) {
+    url += '/'
+  }
+  return url
 }
 
 function setStatus(kind, message) {
@@ -20,8 +19,7 @@ function setStatus(kind, message) {
   status.textContent = message || ''
 }
 
-async function checkRelayReachable(port) {
-  const url = `http://127.0.0.1:${port}/`
+async function checkRelayReachable(url) {
   const maxAttempts = 20
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     setStatus('info', `Checking relay... (${attempt}/${maxAttempts})`)
@@ -48,20 +46,18 @@ async function checkRelayReachable(port) {
 }
 
 async function load() {
-  const stored = await chrome.storage.local.get(['relayPort'])
-  const port = clampPort(stored.relayPort)
-  document.getElementById('port').value = String(port)
-  updateRelayUrl(port)
-  await checkRelayReachable(port)
+  const stored = await chrome.storage.local.get(['relayUrl'])
+  const url = formatUrl(stored.relayUrl)
+  document.getElementById('url').value = url
+  await checkRelayReachable(url)
 }
 
 async function save() {
-  const input = document.getElementById('port')
-  const port = clampPort(input.value)
-  await chrome.storage.local.set({ relayPort: port })
-  input.value = String(port)
-  updateRelayUrl(port)
-  await checkRelayReachable(port)
+  const input = document.getElementById('url')
+  const url = formatUrl(input.value)
+  await chrome.storage.local.set({ relayUrl: url })
+  input.value = url
+  await checkRelayReachable(url)
 }
 
 document.getElementById('save').addEventListener('click', () => void save())
