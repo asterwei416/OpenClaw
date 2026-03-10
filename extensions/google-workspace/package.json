@@ -1,0 +1,14 @@
+{
+  "name": "@openclaw/google-workspace",
+  "version": "2026.2.2",
+  "description": "OpenClaw Google Workspace integration via @googleworkspace/cli",
+  "type": "module",
+  "devDependencies": {
+    "openclaw": "workspace:*"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ]
+  }
+}

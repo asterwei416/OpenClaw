@@ -16,6 +16,9 @@ RUN if [ -n "$OPENCLAW_DOCKER_APT_PACKAGES" ]; then \
   rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*; \
   fi
 
+# Install Google Workspace CLI globally so OpenClaw Agent can invoke `gws`
+RUN npm install -g @googleworkspace/cli
+
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .npmrc ./
 COPY ui/package.json ./ui/package.json
 COPY patches ./patches
@@ -44,6 +47,9 @@ USER node
 
 # Start gateway server with default config.
 # Binds to loopback (127.0.0.1) by default for security.
+
+# Google Workspace CLI config directory (Persisted via Zeabur volume mounted at /home/node/.openclaw)
+ENV GOOGLE_WORKSPACE_CLI_CONFIG_DIR=/home/node/.openclaw/gws_auth
 #
 # For container platforms requiring external health checks:
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
