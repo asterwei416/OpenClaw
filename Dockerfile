@@ -34,23 +34,8 @@ RUN pnpm ui:build
 
 ENV NODE_ENV=production
 
-# Allow non-root user to write temp files during runtime/tests.
-RUN chown -R node:node /app
-
-# Pre-create the directory for volumes to prevent permission denied errors when mounting
-RUN mkdir -p /home/node/.openclaw && chown -R node:node /home/node/.openclaw
-
-# Security / Zeabur Volume Compatibility: 
-# The Zeabur brain volume was mounted at /root/.openclaw by the user. 
-# We need to ensure the `node` user has permission to access it.
-RUN mkdir -p /root/.openclaw && chown -R node:node /root/.openclaw && chmod -R 775 /root/.openclaw
-
-# Security hardening: Run as non-root user
-# The node:22-bookworm image includes a 'node' user (uid 1000)
-# This reduces the attack surface by preventing container escape via root privileges
-USER node
-
-# Start gateway server with default config.
+# Security note: Running as root to ensure compatibility with Zeabur Volumes
+# which are often owned by root when migrating from standard Node.js builders.# Start gateway server with default config.
 # Binds to loopback (127.0.0.1) by default for security.
 
 # Google Workspace CLI config directory (Persisted via Zeabur volume mounted at /root/.openclaw)
