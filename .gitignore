@@ -78,6 +78,7 @@ USER.md
 !package-lock.json
 !tsconfig.json
 !mcporter.json
+!openclaw.plugin.json
 storage/
 sessions/
 .auth/

@@ -1,0 +1,10 @@
+{
+  "id": "google-workspace",
+  "name": "Google Workspace CLI",
+  "description": "Google Workspace integration via @googleworkspace/cli",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  }
+}
