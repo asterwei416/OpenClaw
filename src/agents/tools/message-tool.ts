@@ -337,7 +337,7 @@ function buildMessageToolDescription(options?: {
   currentChannel?: string;
   currentChannelId?: string;
 }): string {
-  const baseDescription = "Send, delete, and manage messages via channel plugins.";
+  const baseDescription = "Send, delete, and manage messages via channel plugins. For Discord, if sending a message outside the current context, you MUST provide explicit target parameters like 'guildId'/'channelId' to avoid 'Action send requires a target' or 'guildId required' errors.";
 
   // If we have a current channel, show only its supported actions
   if (options?.currentChannel) {
