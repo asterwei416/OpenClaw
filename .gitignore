@@ -83,6 +83,9 @@ storage/
 sessions/
 .auth/
 
+# Antigravity Brain Artifacts
+**/brain/**/*.md
+
 credentials.json
 .gcalcli_oauth
 openclaw_calendar.py
