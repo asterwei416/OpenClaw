@@ -4,11 +4,31 @@ import type { OpenClawPluginApi } from "../../../src/plugins/types.js";
 
 const execAsync = promisify(exec);
 
+/**
+ * Escapes a string for use in a shell command.
+ * Specifically handles the double-quotes within JSON strings for Windows PowerShell/CMD.
+ */
+function escapeShellArg(arg: string): string {
+  if (process.platform === "win32") {
+    // In PowerShell/CMD, double quotes in a string that is already double-quoted
+    // need to be escaped with a backtick (`) or sometimes doubled up.
+    // However, since we wrap the whole --params in single quotes usually, 
+    // but Windows doesn't always handle single quotes as expected for nesting JSON.
+    // The most reliable way for GWS CLI on Windows is often to use backslashes before quotes
+    // or doubling them if we use double quotes for the outer wrapper.
+    return arg.replace(/"/g, '\\"');
+  }
+  return arg;
+}
+
 export async function execGws(commandArgs: string, api: OpenClawPluginApi): Promise<unknown> {
   try {
     api.logger.info(`Executing GWS command: ${commandArgs}`);
-    // Always append --format json for structured output
-    const { stdout, stderr } = await execAsync(`gws ${commandArgs} --format json`);
+    
+    // Construct the command. On Windows, we might need to be more careful with how we wrap the whole command if it contains JSON.
+    const fullCommand = `gws ${commandArgs} --format json`;
+    
+    const { stdout, stderr } = await execAsync(fullCommand);
     
     if (stderr && stderr.trim().length > 0) {
       if (stderr.toLowerCase().includes("warn")) {
@@ -20,8 +40,6 @@ export async function execGws(commandArgs: string, api: OpenClawPluginApi): Prom
     try {
       return JSON.parse(stdout);
     } catch {
-      // If it's not JSON, return the raw stdout (e.g. some commands might not output json despite --format json)
-      // Or in page-all mode (NDJSON), we might need to handle it.
       return { rawOutput: stdout };
     }
   } catch (err) {
