@@ -19,7 +19,7 @@ export type ProviderConfig = NonNullable<ModelsConfig["providers"]>[string];
 
 const MINIMAX_API_BASE_URL = "https://api.minimax.chat/v1";
 const MINIMAX_PORTAL_BASE_URL = "https://api.minimax.io/anthropic";
-const MINIMAX_DEFAULT_MODEL_ID = "MiniMax-M2.1";
+const MINIMAX_DEFAULT_MODEL_ID = "minimax-m2.7";
 const MINIMAX_DEFAULT_VISION_MODEL_ID = "MiniMax-VL-01";
 const MINIMAX_DEFAULT_CONTEXT_WINDOW = 200000;
 const MINIMAX_DEFAULT_MAX_TOKENS = 8192;
@@ -267,7 +267,7 @@ function buildMinimaxProvider(): ProviderConfig {
     models: [
       {
         id: MINIMAX_DEFAULT_MODEL_ID,
-        name: "MiniMax M2.1",
+        name: "MiniMax M2.7",
         reasoning: false,
         input: ["text"],
         cost: MINIMAX_API_COST,
@@ -294,7 +294,7 @@ function buildMinimaxPortalProvider(): ProviderConfig {
     models: [
       {
         id: MINIMAX_DEFAULT_MODEL_ID,
-        name: "MiniMax M2.1",
+        name: "MiniMax M2.7",
         reasoning: false,
         input: ["text"],
         cost: MINIMAX_API_COST,
