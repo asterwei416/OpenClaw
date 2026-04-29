@@ -60,6 +60,7 @@ ENV GOOGLE_WORKSPACE_CLI_CONFIG_DIR=/root/.openclaw/gws_auth
 #   1. Set OPENCLAW_GATEWAY_TOKEN or OPENCLAW_GATEWAY_PASSWORD env var
 #   2. Override CMD: ["node","dist/index.js","gateway","--allow-unconfigured","--bind","lan"]
 CMD echo "[OpenClaw] Starting Gateway..." && \
+  python3 scripts/init-google-auth.py && \
   node dist/index.js config unset telegram || true && \
   node dist/index.js config set gateway.controlUi.allowInsecureAuth true && \
   node dist/index.js gateway --allow-unconfigured --bind lan --port 8080
