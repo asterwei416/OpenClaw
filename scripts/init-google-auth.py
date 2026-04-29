@@ -3,6 +3,7 @@
 init-google-auth.py
 每次容器啟動時執行，將 GEMINI_API_KEY 環境變數同步到所有 agent 的 auth-profiles.json。
 只更新 google:default profile，保留其他 provider 的 credentials（如 minimax-portal）。
+同時確保 thinkingDefault 設為 "off"，避免 gemini-2.5-flash 自動開啟推理模式產生額外費用。
 """
 import json
 import os
@@ -62,3 +63,18 @@ for agent_dir in agent_dirs:
     update_auth_file(agent_path, key)
 
 print(f"[init-google-auth] Done. Key prefix: {key[:10]}...")
+
+# ── 關閉 Thinking 模式 ──────────────────────────────────────────────────────
+# gemini-2.5-flash 支援推理，OpenClaw 會自動套用 "low" thinking。
+# 日常 LINE 對話不需要推理，強制設為 "off" 以節省 token 費用。
+openclaw_json_path = os.path.join(base, "openclaw.json")
+if os.path.exists(openclaw_json_path):
+    try:
+        with open(openclaw_json_path, "r") as f:
+            cfg = json.load(f)
+        cfg.setdefault("agents", {}).setdefault("defaults", {})["thinkingDefault"] = "off"
+        with open(openclaw_json_path, "w") as f:
+            json.dump(cfg, f, indent=2)
+        print("[init-google-auth] thinkingDefault set to 'off'")
+    except Exception as e:
+        print(f"[init-google-auth] WARNING: failed to set thinkingDefault: {e}")
