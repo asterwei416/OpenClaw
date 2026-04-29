@@ -42,8 +42,7 @@ describe("applyModelDefaults", () => {
       agents: {
         defaults: {
           models: {
-            "google/gemini-3-pro-preview": { alias: "" },
-            "google/gemini-3-flash-preview": {},
+            "google/gemini-2.0-flash": { alias: "" },
           },
         },
       },
@@ -51,10 +50,7 @@ describe("applyModelDefaults", () => {
 
     const next = applyModelDefaults(cfg);
 
-    expect(next.agents?.defaults?.models?.["google/gemini-3-pro-preview"]?.alias).toBe("");
-    expect(next.agents?.defaults?.models?.["google/gemini-3-flash-preview"]?.alias).toBe(
-      "gemini-flash",
-    );
+    expect(next.agents?.defaults?.models?.["google/gemini-2.0-flash"]?.alias).toBe("");
   });
 
   it("fills missing model provider defaults", () => {

@@ -8,6 +8,7 @@ export type AuthProfileConfig = {
    */
   mode: "api_key" | "oauth" | "token";
   email?: string;
+  apiKey?: string;
 };
 
 export type AuthConfig = {
