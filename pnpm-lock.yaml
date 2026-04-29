@@ -321,6 +321,12 @@ importers:
         specifier: workspace:*
         version: link:../..
 
+  extensions/google-workspace:
+    devDependencies:
+      openclaw:
+        specifier: workspace:*
+        version: link:../..
+
   extensions/googlechat:
     dependencies:
       google-auth-library:
